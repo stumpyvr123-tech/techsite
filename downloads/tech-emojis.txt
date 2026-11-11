@@ -1,0 +1,13 @@
+TechBase - Tech Emojis
+
+Computers & Hardware
+💻 Laptop, 🖥️ Desktop Computer, ⌨️ Keyboard, 🖱️ Computer Mouse, 🖨️ Printer, 🖲️ Trackball
+
+Storage & Data
+💾 Floppy Disk, 💽 Computer Disk, 💿 Optical Disk, 📀 DVD
+
+Devices & Power
+📱 Mobile Phone, 🔋 Battery, 🪫 Low Battery, 🔌 Electric Plug, ⚡ High Voltage, 📡 Satellite
+
+People & Roles
+🧑‍💻 Technologist, 👩‍💻 Woman Technologist, 👨‍💻 Man Technologist, 🤖 Robot

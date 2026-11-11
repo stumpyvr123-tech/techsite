@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloadables - TechBase</title>
+    <style>
+        .custom-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            border: 2px solid #0618db;
+            border-radius: 6px;
+            background: linear-gradient(#3470fa, #313ed7);
+            color: white;
+            font: 600 16px Arial, sans-serif;
+            text-decoration: none;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .custom-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px #0003;
+        }
+
+        .custom-button:focus-visible {
+            outline: 3px solid #ff00aa;
+            outline-offset: 3px;
+        }
+
+        .custom-button:active {
+            transform: translateY(0);
+            background: linear-gradient(#313ed7, #3470fa);
+        }
+    </style>
+</head>
+
+<body>
+    <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="resources.html">Resources</a>
+        <a href="guides.html">Guides</a>
+        <a href="news.html">News</a>
+        <a href="downloadables.html" aria-current="page">Downloadables</a>
+    </nav>
+
+    <main>
+        <h1>Downloadables</h1>
+        <p>Download the tech emojis and images from the <a href="emoticons.html">emoticons page</a>.</p>
+        <div class="download-button">
+            <a class="custom-button" href="downloads/techbase-downloadables.zip" download>
+                Download everything (.zip)
+            </a>
+        </div>
+
+        <section aria-label="Available downloads">
+            <h2>Tech emojis</h2>
+            <p>All 20 emojis from the emoticons page, grouped by category in a text file.</p>
+            <p><a href="downloads/tech-emojis.txt" download>Download emojis (.txt)</a></p>
+
+            <h2>Computer hardware</h2>
+            <p>
+                <img src="downloads/tech-images/computer-hardware.jpg" alt="Close-up of a computer circuit board"
+                    width="300">
+            </p>
+            <p><a href="downloads/tech-images/computer-hardware.jpg" download>Download image (.jpg)</a></p>
+
+            <h2>Laptop workspace</h2>
+            <p>
+                <img src="downloads/tech-images/laptop-workspace.jpg" alt="Laptop computer on a desk" width="300">
+            </p>
+            <p><a href="downloads/tech-images/laptop-workspace.jpg" download>Download image (.jpg)</a></p>
+
+            <h2>Technology and teamwork</h2>
+            <p>
+                <img src="downloads/tech-images/technology-teamwork.jpg" alt="People collaborating around computers"
+                    width="300">
+            </p>
+            <p><a href="downloads/tech-images/technology-teamwork.jpg" download>Download image (.jpg)</a></p>
+        </section>
+    </main>
+</body>
+
+</html>

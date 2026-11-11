@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #stats-loader {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            min-height: 100px;
+            color: #313ed7;
+            font-weight: 600;
+        }
+
+        #stats-loader[hidden] {
+            display: none;
+        }
+
+
+
+        #stats-error {
+            color: #a32020;
+        }
+
+        #stats-error[hidden] {
+            display: none;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .loader-spinner {
+                animation-duration: 2s;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="stats-loader" role="status" aria-live="polite">
+        <span class="loader-spinner" aria-hidden="true"></span>
+        <div class="spinner"></div>
+    </div>
+    <p id="stats-error" role="alert" hidden>Stats could not be loaded. Please try again later.</p>
+    <div id="sfcd42w2wmh2nl544n7pj2n5rjqjz3mleph" aria-busy="true"></div>
+    <a href="https://www.freecounterstat.com">View Source</a>
+    <noscript>
+        <a href="https://www.freecounterstat.com" title="free page counter">
+            <img src="https://counter6.optistats.ovh/private/freecounterstat.php?c=d42w2wmh2nl544n7pj2n5rjqjz3mleph"
+                alt="Free page counter">
+        </a>
+    </noscript>
+
+    <script>
+        const stats = document.getElementById("sfcd42w2wmh2nl544n7pj2n5rjqjz3mleph");
+        const loader = document.getElementById("stats-loader");
+        const errorMessage = document.getElementById("stats-error");
+        const statsScript = document.createElement("script");
+        let finished = false;
+
+        function finishLoading(success) {
+            if (finished) return;
+            finished = true;
+            clearTimeout(timeout);
+            observer.disconnect();
+            loader.hidden = true;
+            stats.setAttribute("aria-busy", "false");
+            errorMessage.hidden = success;
+        }
+
+        const observer = new MutationObserver(() => {
+            if (stats.childNodes.length > 0) finishLoading(true);
+        });
+        observer.observe(stats, {
+            childList: true,
+            subtree: true,
+            characterData: true
+        });
+
+        const timeout = setTimeout(() => finishLoading(false), 15000);
+        statsScript.src =
+            "https://counter6.optistats.ovh/private/counter.js?c=d42w2wmh2nl544n7pj2n5rjqjz3mleph&down=async";
+        statsScript.async = true;
+        statsScript.onerror = () => finishLoading(false);
+        document.body.appendChild(statsScript);
+    </script>
+
+
+    <style>
+        .spinner {
+            --d: 24.6px;
+            width: 4.5px;
+            height: 4.5px;
+            border-radius: 50%;
+            color: #474bff;
+            box-shadow: calc(1*var(--d)) calc(0*var(--d)) 0 0,
+                calc(0.707*var(--d)) calc(0.707*var(--d)) 0 1.1px,
+                calc(0*var(--d)) calc(1*var(--d)) 0 2.2px,
+                calc(-0.707*var(--d)) calc(0.707*var(--d)) 0 3.4px,
+                calc(-1*var(--d)) calc(0*var(--d)) 0 4.5px,
+                calc(-0.707*var(--d)) calc(-0.707*var(--d))0 5.6px,
+                calc(0*var(--d)) calc(-1*var(--d)) 0 6.7px;
+            animation: spinner-a90wxe 1s infinite steps(8);
+        }
+
+        @keyframes spinner-a90wxe {
+            100% {
+                transform: rotate(1turn);
+            }
+        }
+    </style>
+</body>
+
+</html>

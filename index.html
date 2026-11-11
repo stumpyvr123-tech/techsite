@@ -9,13 +9,15 @@
 
 <body>
 
-    <div>
-        <button class="button" popovertarget="tip1">About</button>
-        <button class="button">Resources</button>
-        <button class=" button">Guides</button>
-        <button onclick="window.location = 'news.html'" class="button">News</button>
-    </div>
 
+    <nav class="top-buttons" aria-label="Main navigation">
+        <button class="top-link" popovertarget="tip1">About</button>
+        <a class="top-link" href="resources.html">Resources</a>
+        <a class="top-link" href="guides.html">Guides</a>
+        <a class="top-link" href="news.html">News</a>
+        <a class="top-link" href="downloadables.html">Downloadables</a>
+
+    </nav>
 
     <div id="tip1" popover>
 
@@ -24,12 +26,13 @@
         <a class="button" href="aboutcreators.html">About the creators.</a>
     </div>
 
-
     <h1>Welcome to techbase! </h1>
 
     <p>This website provides everything you need for your Information Technology (it) journey. </p>
     <p>This is also GREAT for basic users or nerds, as they can get new information on the latest iPhone or tech drops
         .</p>
+
+    <p>Please select one of the avaliable options above.</p>
 
 
 
@@ -64,6 +67,25 @@
         body {
             text-align: center;
             font-family: Arial, sans-serif;
+        }
+
+        .top-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .top-link {
+            color: #0000ee;
+            font: inherit;
+            text-decoration: underline;
+        }
+
+        button.top-link {
+            cursor: pointer;
+            background: none;
+            border: 0;
+            padding: 0;
         }
 
         .button {
